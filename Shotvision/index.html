@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Camera shot detecter</title>
+    <link rel="stylesheet" href="style.css">
+
+<!-- MediaPipe -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <h1>Camera Shot Detector</h1>
+        <p>Real-time cinematic shot detection </p>
+    </header>
+    
+    <main>
+        <section class="camera-section">
+            <div class="video-container">
+                <video id="video" autoplay playsinline></video>
+
+                <canvas id="canvas"></canvas>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn">Start Detection</button>
+                <button id="stopBtn">Stop Detection</button>
+            </div>
+        </section>
+
+        <section class="result-section">
+            <div class="result-card">
+                <h2>Detected Shot </h2>
+
+                <div id="shotType">
+                    Camera Off
+                </div>
+
+                <p id="description">
+                    Start the Camera to detect the your shot.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h2>Detection Info</h2>
+                <p>
+                    Clarity:
+                     <strong id="subjectSize">0%</strong>
+                </p>
+
+                <p>
+                    Position:
+                    <strong id="Position">-</strong>
+                </p>
+
+                <p>
+                    Status:
+                    <strong id="status">Camera off</strong>
+                </p>
+
+            </div>
+
+        </section>
+
+        </main>
+    
+    <footer>
+        <p>AI Camera shot Detector | HTML , CSS , JAVASCRIPT , MEDIAPIPE</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
